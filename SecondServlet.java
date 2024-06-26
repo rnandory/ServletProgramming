@@ -1,13 +1,13 @@
 import jakarta.servlet.*;
 import jakarta.servlet.http.*;
 import java.io.*;
-// import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.annotation.WebServlet;
 
-// @WebServlet("/hi")
+@WebServlet("/hi")
 public class SecondServlet extends HttpServlet {
-    public void service(HttpServletRequest HttpServletRequest, HttpServletResponse response)
+    public void service(HttpServletRequest request, HttpServletResponse response)
             throws IOException, ServletException {
-        System.out.println("hello Second Servlet 1 2 3 4");
+        System.out.println("hello Second Servlet");
         PrintWriter out = response.getWriter();
         out.println("Hello Second Servlet!");
     }
